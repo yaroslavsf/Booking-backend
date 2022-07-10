@@ -14,7 +14,8 @@ builder.Services.AddSwaggerGen();
 //add front
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("local react", policyOptions => { policyOptions.WithOrigins("http://localhost:3000"); });
+    options.AddPolicy("local react", policyOptions => { policyOptions.WithOrigins("http://localhost:3000").AllowAnyHeader().AllowAnyMethod(); });
+    
 });
 
 //-------------------------------------------------------
