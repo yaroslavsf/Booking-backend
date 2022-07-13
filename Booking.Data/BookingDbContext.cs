@@ -7,6 +7,7 @@ namespace Booking.Data
     {
         public DbSet<Room> Rooms { get; set; }
         public DbSet<RoomBooking> Bookings { get; set; }
+        public DbSet<User> Users { get; set; }
 
         public BookingDbContext(DbContextOptions <BookingDbContext> options) : base(options)
         {
